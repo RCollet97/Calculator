@@ -8,46 +8,55 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <script src="scripts/script.js" defer></script>
 </head>
 <body>
-    <div class="container">
-        <div class="titre">
-            <h1>Calculator</h1>
-        </div>
-        <div class="calculatrice">
-            <div class="affichage">
-                <form>
-                    <input type="text">
-                </form>
-            </div>
-            <div class="boutons">
-                <div class="box"><button>%</button></div>
-                <div class="box"><button>C</button></div>
-                <div class="box"><button>SUPP</button></div>
-                <div class="box"><button>/</button></div>
-                <div class="box"><button>7</button></div>
-                <div class="box"><button>8</button></div>
-                <div class="box"><button>9</button></div>
-                <div class="box"><button>x</button></div>
-                <div class="box"><button>4</button></div>
-                <div class="box"><button>5</button></div>
-                <div class="box"><button>6</button></div>
-                <div class="box"><button>-</button></div>
-                <div class="box"><button>1</button></div>
-                <div class="box"><button>2</button></div>
-                <div class="box"><button>3</button></div>
-                <div class="box"><button>+</button></div>
-                <div class="box"><button>+/-</button></div>
-                <div class="box"><button>0</button></div>
-                <div class="box"><button>,</button></div>
-                <div class="box"><button>=</button></div>
+    <header>
+        <div class="container">
+            <div class="title">
+                <h1>Calculator</h1>
             </div>
         </div>
-    </div>
-    
-    
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="calculator">
+                <div class="displays">
+                    <form>
+                        <input type="text" id="display" disabled>
+                    </form>
+                </div>
+                <div class="buttons">
+                    <div onclick="appendToDisplay('%')" class="box"><button>%</button></div>
+                    <div onclick="clearDisplay()" class="box"><button>C</button></div>
+                    <div onclick="suppLastDisplay()" class="box"><button>SUPP</button></div>
+                    <div onclick="appendToDisplay('/')" class="box"><button>/</button></div>
+                    <div onclick="appendToDisplay('7')" class="box"><button>7</button></div>
+                    <div onclick="appendToDisplay('8')" class="box"><button>8</button></div>
+                    <div onclick="appendToDisplay('9')" class="box"><button>9</button></div>
+                    <div onclick="appendToDisplay('*')" class="box"><button>x</button></div>
+                    <div onclick="appendToDisplay('4')" class="box"><button>4</button></div>
+                    <div onclick="appendToDisplay('5')" class="box"><button>5</button></div>
+                    <div onclick="appendToDisplay('6')" class="box"><button>6</button></div>
+                    <div onclick="appendToDisplay('-')" class="box"><button>-</button></div>
+                    <div onclick="appendToDisplay('1')" class="box"><button>1</button></div>
+                    <div onclick="appendToDisplay('2')" class="box"><button>2</button></div>
+                    <div onclick="appendToDisplay('3')" class="box"><button>3</button></div>
+                    <div onclick="appendToDisplay('+')" class="box"><button>+</button></div>
+                    <div onclick="appendToDisplay('-')" class="box"><button>+/-</button></div>
+                    <div onclick="appendToDisplay('0')" class="box"><button>0</button></div>
+                    <div onclick="appendToDisplay(',')" class="box"><button>,</button></div>
+                    <div onclick="calculateResult()" class="box"><button>=</button></div>
+                </div>
+            </div>
+        </div>
+    </main>
 </body>
 </html>
